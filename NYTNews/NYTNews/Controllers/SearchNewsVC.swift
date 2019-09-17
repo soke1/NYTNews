@@ -24,7 +24,17 @@ extension SearchNewsVC: UISearchBarDelegate {
         guard let searchText = searchBar.text, !searchText.isEmpty else {
             return
         }
-        print("search text:\(searchText)")
-        //TODO: Call Service request
+        
+        //TODO: Call Service request and load to table view
+        let request = NewsArticleRequest.from(search: searchText)
+        let searchClient = SearchNewsArticleClient()
+        searchClient.fetchNews(with:request, page: 0) { responseResult in
+            switch responseResult{
+            case .success(let response):
+                print(response.response)
+            case .failure(let error):
+                print(error.reason)
+            }
+        }
     }
 }
