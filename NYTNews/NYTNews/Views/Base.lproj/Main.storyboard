@@ -126,7 +126,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="08W-da-jCO"/>
                     </view>
-                    <navigationItem key="navigationItem" title="The New York Times Detail" id="pdG-KO-M37"/>
+                    <navigationItem key="navigationItem" title="The New York Times Detail" id="pdG-KO-M37">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="CWq-Sw-O8k">
+                            <connections>
+                                <action selector="shareNewsArticle:" destination="4ZF-JE-Zrm" id="WCW-gZ-UVL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="loadIndicator" destination="qZg-f2-qHO" id="fwd-gU-MvW"/>
                         <outlet property="newsArticleWV" destination="03r-o9-zm1" id="fya-7d-bdC"/>

@@ -21,6 +21,18 @@ class NewsArticleDetailVC: UIViewController {
         newsArticleWV.loadRequest(requestObj)
     }
     
+    @IBAction func shareNewsArticle(_ sender: UIBarButtonItem) {
+        guard
+            let url = self.url
+            else { return }
+        
+        let activity = UIActivityViewController(
+            activityItems: ["Sharing News Article!!!", url],
+            applicationActivities: nil
+        )
+        activity.popoverPresentationController?.barButtonItem = sender
+        present(activity, animated: true, completion: nil)
+    }
 }
 extension NewsArticleDetailVC: UIWebViewDelegate{
     func webViewDidStartLoad(_ webView: UIWebView){
