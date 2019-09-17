@@ -20,7 +20,14 @@ class SearchNewsVC: UIViewController {
         // Do any additional setup after loading the view.
         newsArticleTV.isHidden = true
         newsArticleTV.dataSource = self
-        loadIndicator.isHidden = true
+    }
+    // MARK: - Segue
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? NewsArticleDetailVC else { return }
+        let selectedIndex = self.newsArticleTV.indexPath(for: sender as! NewsCell)
+        if newArticleVM != nil{
+            viewController.url = newArticleVM.newsArticle(at: selectedIndex!.row).web_url
+        }
     }
 }
 

@@ -26,6 +26,7 @@
 		236FDB3E23306E7400564905 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB3D23306E7400564905 /* Meta.swift */; };
 		236FDB41233070C700564905 /* NewsArticleViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB40233070C700564905 /* NewsArticleViewModels.swift */; };
 		236FDB432330713000564905 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB422330713000564905 /* NewsCell.swift */; };
+		236FDB4523307BE900564905 /* NewsArticleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB4423307BE900564905 /* NewsArticleDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		236FDB3D23306E7400564905 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		236FDB40233070C700564905 /* NewsArticleViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewModels.swift; sourceTree = "<group>"; };
 		236FDB422330713000564905 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		236FDB4423307BE900564905 /* NewsArticleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2345BCA823305FAF00D75429 /* SearchNewsVC.swift */,
+				236FDB4423307BE900564905 /* NewsArticleDetailVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				236FDB3623306DEB00564905 /* Response.swift in Sources */,
 				236FDB432330713000564905 /* NewsCell.swift in Sources */,
 				236FDB3423306D0800564905 /* NewsArticleResponse.swift in Sources */,
+				236FDB4523307BE900564905 /* NewsArticleDetailVC.swift in Sources */,
 				2345BCA923305FAF00D75429 /* SearchNewsVC.swift in Sources */,
 				236FDB3C23306E5F00564905 /* Multimedia.swift in Sources */,
 				236FDB2B23306CA100564905 /* NewsArticleRequest.swift in Sources */,

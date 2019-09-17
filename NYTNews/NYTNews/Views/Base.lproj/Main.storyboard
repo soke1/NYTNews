@@ -63,11 +63,12 @@
                                         <connections>
                                             <outlet property="headlineLbl" destination="5rJ-6s-Khy" id="GCp-4X-ZUv"/>
                                             <outlet property="thumbnailImageView" destination="DRN-uh-eM1" id="sFP-Ob-gEV"/>
+                                            <segue destination="4ZF-JE-Zrm" kind="show" id="R4P-Cs-ohu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WF8-f6-uuF">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WF8-f6-uuF">
                                 <rect key="frame" x="197" y="465" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -94,6 +95,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
+        </scene>
+        <!--The New York Times Detail-->
+        <scene sceneID="9ay-8o-Dk7">
+            <objects>
+                <viewController id="4ZF-JE-Zrm" customClass="NewsArticleDetailVC" customModule="NYTNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9nm-Sl-h4S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03r-o9-zm1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4ZF-JE-Zrm" id="rF1-ha-TiJ"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="qZg-f2-qHO">
+                                <rect key="frame" x="197" y="465" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="03r-o9-zm1" firstAttribute="leading" secondItem="08W-da-jCO" secondAttribute="leading" id="AbA-xP-4Js"/>
+                            <constraint firstItem="03r-o9-zm1" firstAttribute="top" secondItem="08W-da-jCO" secondAttribute="top" id="Bse-lB-rON"/>
+                            <constraint firstItem="qZg-f2-qHO" firstAttribute="centerY" secondItem="08W-da-jCO" secondAttribute="centerY" id="TvG-n9-aon"/>
+                            <constraint firstItem="08W-da-jCO" firstAttribute="trailing" secondItem="03r-o9-zm1" secondAttribute="trailing" id="UVX-XM-AHF"/>
+                            <constraint firstItem="08W-da-jCO" firstAttribute="bottom" secondItem="03r-o9-zm1" secondAttribute="bottom" id="fiR-Ne-nfl"/>
+                            <constraint firstItem="qZg-f2-qHO" firstAttribute="centerX" secondItem="08W-da-jCO" secondAttribute="centerX" id="z7W-0m-SpQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="08W-da-jCO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="The New York Times Detail" id="pdG-KO-M37"/>
+                    <connections>
+                        <outlet property="loadIndicator" destination="qZg-f2-qHO" id="fwd-gU-MvW"/>
+                        <outlet property="newsArticleWV" destination="03r-o9-zm1" id="fya-7d-bdC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ey-ig-Vke" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M1w-bS-11u">
