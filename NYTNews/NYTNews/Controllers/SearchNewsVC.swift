@@ -20,6 +20,7 @@ class SearchNewsVC: UIViewController {
         // Do any additional setup after loading the view.
         newsArticleTV.isHidden = true
         newsArticleTV.dataSource = self
+        newsArticleTV.prefetchDataSource = self
     }
     // MARK: - Segue
     public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,8 +45,6 @@ extension SearchNewsVC: UISearchBarDelegate {
         newArticleVM = NewsArticleViewModels(request: request, delegate: self)
         newArticleVM.saerchNews()
         loadIndicator.startAnimating()
-        
-        //TODO: Call Service request and load to table view when scrolled to the bottom (pagination of results)
     }
 }
 
@@ -85,5 +84,20 @@ extension SearchNewsVC: UITableViewDataSource {
             cell.setup(doc: newArticleVM.newsArticle(at: indexPath.row))
         }
         return cell
+    }
+}
+//
+// MARK: - TableView DataSource Prefetching
+//
+extension SearchNewsVC: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        if indexPaths.contains(where: isLoadingCell) {
+            newArticleVM.saerchNews()
+        }
+    }
+}
+private extension SearchNewsVC {
+    func isLoadingCell(for indexPath: IndexPath) -> Bool {
+        return indexPath.row >= (newArticleVM.currentCount - 1 )
     }
 }

@@ -36,13 +36,11 @@ class NewsArticleDetailVC: UIViewController {
 }
 extension NewsArticleDetailVC: UIWebViewDelegate{
     func webViewDidStartLoad(_ webView: UIWebView){
-        print("Webview started Loading")
         loadIndicator.startAnimating()
         
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        print("Webview did finish load")
         loadIndicator.stopAnimating()
     }
 }

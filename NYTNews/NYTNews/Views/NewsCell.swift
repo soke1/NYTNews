@@ -18,7 +18,7 @@ class NewsCell: UITableViewCell {
     func setup(doc:Doc?){
         if let doc = doc{
             headlineLbl.text = doc.headline.main
-            
+            //TODO: add loading when waiting fetch image
             if let mediaURL = doc.multimedia.first{
                 let urlString = "\(baseURL)\(mediaURL.url)"
                 let url = URL(string:urlString)
