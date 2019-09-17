@@ -27,7 +27,19 @@
 		236FDB41233070C700564905 /* NewsArticleViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB40233070C700564905 /* NewsArticleViewModels.swift */; };
 		236FDB432330713000564905 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB422330713000564905 /* NewsCell.swift */; };
 		236FDB4523307BE900564905 /* NewsArticleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB4423307BE900564905 /* NewsArticleDetailVC.swift */; };
+		236FDB56233087CA00564905 /* NewsArticleRequestUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB55233087CA00564905 /* NewsArticleRequestUnitTests.swift */; };
+		236FDB582330883300564905 /* SearchNewsArticleClientUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236FDB572330883300564905 /* SearchNewsArticleClientUnitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		236FDB4F2330872D00564905 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2345BC9B23305FAF00D75429 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2345BCA223305FAF00D75429;
+			remoteInfo = NYTNews;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2345BCA323305FAF00D75429 /* NYTNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,10 +64,21 @@
 		236FDB40233070C700564905 /* NewsArticleViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleViewModels.swift; sourceTree = "<group>"; };
 		236FDB422330713000564905 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		236FDB4423307BE900564905 /* NewsArticleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleDetailVC.swift; sourceTree = "<group>"; };
+		236FDB4A2330872D00564905 /* NYTNewsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYTNewsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		236FDB4E2330872D00564905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		236FDB55233087CA00564905 /* NewsArticleRequestUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticleRequestUnitTests.swift; sourceTree = "<group>"; };
+		236FDB572330883300564905 /* SearchNewsArticleClientUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNewsArticleClientUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2345BCA023305FAF00D75429 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236FDB472330872D00564905 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				2345BCA523305FAF00D75429 /* NYTNews */,
+				236FDB4B2330872D00564905 /* NYTNewsUnitTests */,
 				2345BCA423305FAF00D75429 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				2345BCA323305FAF00D75429 /* NYTNews.app */,
+				236FDB4A2330872D00564905 /* NYTNewsUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +190,24 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		236FDB4B2330872D00564905 /* NYTNewsUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				236FDB542330874300564905 /* ServiceCalls */,
+				236FDB4E2330872D00564905 /* Info.plist */,
+			);
+			path = NYTNewsUnitTests;
+			sourceTree = "<group>";
+		};
+		236FDB542330874300564905 /* ServiceCalls */ = {
+			isa = PBXGroup;
+			children = (
+				236FDB55233087CA00564905 /* NewsArticleRequestUnitTests.swift */,
+				236FDB572330883300564905 /* SearchNewsArticleClientUnitTests.swift */,
+			);
+			path = ServiceCalls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -185,6 +228,24 @@
 			productReference = 2345BCA323305FAF00D75429 /* NYTNews.app */;
 			productType = "com.apple.product-type.application";
 		};
+		236FDB492330872D00564905 /* NYTNewsUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 236FDB532330872D00564905 /* Build configuration list for PBXNativeTarget "NYTNewsUnitTests" */;
+			buildPhases = (
+				236FDB462330872D00564905 /* Sources */,
+				236FDB472330872D00564905 /* Frameworks */,
+				236FDB482330872D00564905 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				236FDB502330872D00564905 /* PBXTargetDependency */,
+			);
+			name = NYTNewsUnitTests;
+			productName = NYTNewsUnitTests;
+			productReference = 236FDB4A2330872D00564905 /* NYTNewsUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +258,11 @@
 				TargetAttributes = {
 					2345BCA223305FAF00D75429 = {
 						CreatedOnToolsVersion = 10.3;
+					};
+					236FDB492330872D00564905 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+						TestTargetID = 2345BCA223305FAF00D75429;
 					};
 				};
 			};
@@ -214,6 +280,7 @@
 			projectRoot = "";
 			targets = (
 				2345BCA223305FAF00D75429 /* NYTNews */,
+				236FDB492330872D00564905 /* NYTNewsUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,6 +293,13 @@
 				2345BCB123305FB000D75429 /* LaunchScreen.storyboard in Resources */,
 				2345BCAE23305FB000D75429 /* Assets.xcassets in Resources */,
 				2345BCAC23305FAF00D75429 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236FDB482330872D00564905 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +330,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		236FDB462330872D00564905 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				236FDB582330883300564905 /* SearchNewsArticleClientUnitTests.swift in Sources */,
+				236FDB56233087CA00564905 /* NewsArticleRequestUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		236FDB502330872D00564905 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2345BCA223305FAF00D75429 /* NYTNews */;
+			targetProxy = 236FDB4F2330872D00564905 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2345BCAA23305FAF00D75429 /* Main.storyboard */ = {
@@ -428,6 +519,47 @@
 			};
 			name = Release;
 		};
+		236FDB512330872D00564905 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NYTNewsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sk.NYTNewsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTNews.app/NYTNews";
+			};
+			name = Debug;
+		};
+		236FDB522330872D00564905 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NYTNewsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sk.NYTNewsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYTNews.app/NYTNews";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -445,6 +577,15 @@
 			buildConfigurations = (
 				2345BCB623305FB000D75429 /* Debug */,
 				2345BCB723305FB000D75429 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		236FDB532330872D00564905 /* Build configuration list for PBXNativeTarget "NYTNewsUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				236FDB512330872D00564905 /* Debug */,
+				236FDB522330872D00564905 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
