@@ -14,7 +14,17 @@ class SearchNewsVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
+//
+// MARK: - Search Bar Delegate
+//
+extension SearchNewsVC: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text, !searchText.isEmpty else {
+            return
+        }
+        print("search text:\(searchText)")
+        //TODO: Call Service request
+    }
+}
